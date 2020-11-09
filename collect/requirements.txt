@@ -1,0 +1,3 @@
+lol_id_tools==1.4.0
+psycopg2
+leaguepedia_parser==1.0.1
