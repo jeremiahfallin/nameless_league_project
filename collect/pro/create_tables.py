@@ -222,15 +222,47 @@ def create_tables(conn):
         CREATE TABLE kill (
             id SERIAL PRIMARY KEY,
             timestamp BIGINT NOT NULL,
-            game_id REFERENCES game (id),
-            killer_id REFERENCES player (id),
-            assist_id_1 REFERENCES player (id),
-            assist_id_2 REFERENCES player (id),
-            assist_id_3 REFERENCES player (id),
-            assist_id_4 REFERENCES player (id),
-            victim_id REFERENCES player (id),
-            position REFERENCES position (id)
             )
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN killer_id SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_1 SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_2 SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_3 SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_4 SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN victim_id SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN position SERIAL
+            REFERENCES position (id);
         """,
         """
         CREATE TABLE source (
@@ -271,7 +303,6 @@ def create_tables(conn):
             b4 TEXT NOT NULL,
             b5 TEXT NOT NULL,
             r5 TEXT NOT NULL,
-            game_id REFERENCES game (id),
             )
         """,
         """
@@ -280,12 +311,33 @@ def create_tables(conn):
             type TEXT NOT NULL,
             sub_type TEXT NOT NULL,
             timestamp BIGINT NOT NULL,
-            game_id REFERENCES game (id),
-            team_id REFERENCES team (id),
-            killer_id REFERENCES player (id),
-            position REFERENCES position (id)
             )
         """,
+        """
+            ALTER TABLE pick_ban
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id);
+        """,
+        """
+            ALTER TABLE team_monster_kill
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id);
+        """,
+        """
+            ALTER TABLE team_monster_kill
+            ADD COLUMN team_id SERIAL
+            REFERENCES team (id);
+        """,
+        """
+            ALTER TABLE team_monster_kill
+            ADD COLUMN player SERIAL
+            REFERENCES player (id);
+        """,
+        """
+            ALTER TABLE team_monster_kill
+            ADD COLUMN position SERIAL
+            REFERENCES position (id);
+        """
         )
     try:
         # connect to the PostgreSQL server
