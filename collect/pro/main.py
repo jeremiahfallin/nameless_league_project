@@ -2,6 +2,7 @@ import leaguepedia_parser
 import psycopg2
 from time import sleep
 from collect import *
+from create_tables import create_tables
 
 
 # psycopg2.OperationalError: FATAL:  the database system is starting up
@@ -10,7 +11,6 @@ conn = psycopg2.connect(
     database="pro_league",
     user="admin",
     password="admin")
-
 
 def connect(conn):
     """ Connect to the PostgreSQL database server """
@@ -37,4 +37,5 @@ def connect(conn):
 
 
 if __name__ == '__main__':
-    connect(conn)
+    # connect(conn)
+    create_tables(conn)
