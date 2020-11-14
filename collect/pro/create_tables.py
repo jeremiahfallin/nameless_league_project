@@ -27,10 +27,7 @@ def create_tables(conn):
                 cs_diff INTEGER NOT NULL,
                 monsters_killed INTEGER NOT NULL,
                 monsters_killed_diff INTEGER NOT NULL,
-                timestamp BIGINT NOT NULL,
-                game_id SERIAL REFERENCES game (id),
-                player_id SERIAL REFERENCES player (id),
-                position SERIAL REFERENCES position (id)
+                timestamp BIGINT NOT NULL
                 )
         """,
         """
@@ -79,9 +76,7 @@ def create_tables(conn):
                 total_units_healed INTEGER NOT NULL,
                 damage_self_mitigated INTEGER NOT NULL,
                 total_time_cc_dealt INTEGER NOT NULL,
-                time_ccing_others INTEGER NOT NULL,
-                game_id REFERENCES game (id),
-                player_id REFERENCES player (id)
+                time_ccing_others INTEGER NOT NULL
         )
         """,
         """
@@ -90,12 +85,10 @@ def create_tables(conn):
                 riot_id INTEGER NOT NULL,
                 name TEXT NOT NULL,
                 rune_tree TEXT NOT NULL,
-                primary BOOLEAN NOT NULL,
+                primary_tree BOOLEAN NOT NULL,
                 stats_1 INTEGER NOT NULL,
                 stats_2 INTEGER NOT NULL,
-                stats_3 INTEGER NOT NULL,   
-                game_id REFERENCES game (id),
-                player_id REFERENCES player (id)  
+                stats_3 INTEGER NOT NULL
         )
         """,
         """
@@ -105,25 +98,12 @@ def create_tables(conn):
                 secondary_tree TEXT NOT NULL,
                 base_stats_1 TEXT NOT NULL,
                 base_stats_2 TEXT NOT NULL,
-                base_stats_3 TEXT NOT NULL,
-                game_id REFERENCES game (id),
-                player_id REFERENCES player (id),
-                primary_1 REFERENCES rune (id),
-                primary_2 REFERENCES rune (id),
-                primary_3 REFERENCES rune (id),
-                secondary_1 REFERENCES rune (id),
-                secondary_2 REFERENCES rune (id),
+                base_stats_3 TEXT NOT NULL
         )
         """,
         """
         CREATE TABLE player (
-                id SERIAL PRIMARY KEY,
-                team_id REFERENCES team (id),
-                summoner_spells REFERENCES summoner_spell_player (id),
-                runes REFERENCES rune (id),
-                item_events REFERENCES player_item_event (id),
-                ward_events REFERENCES player_ward_events (id),
-                skill_level_events REFERENCES player_skill_level_events (id)
+                id SERIAL PRIMARY KEY
         )
         """,
         """
@@ -131,9 +111,7 @@ def create_tables(conn):
                 id SERIAL PRIMARY KEY,
                 slot INTEGER NOT NULL,
                 riot_id INTEGER NOT NULL,
-                name TEXT NOT NULL,
-                game_id REFERENCES game (id),
-                player_id REFERENCES player (id),
+                name TEXT NOT NULL
         )
         """,
         """
@@ -150,10 +128,7 @@ def create_tables(conn):
             id SERIAL PRIMARY KEY,
             type TEXT NOT NULL,
             slot TEXT NOT NULL,
-            timestamp BIGINT NOT NULL,
-            position REFERENCES position (id),
-            game_id REFERENCES game (id),
-            player_id REFERENCES player (id),
+            timestamp BIGINT NOT NULL
             )
         """,
         """
@@ -163,10 +138,7 @@ def create_tables(conn):
             riot_id INTEGER NOT NULL,
             name TEXT NOT NULL,
             undo_id BOOLEAN,
-            timestamp BIGINT NOT NULL,
-            position REFERENCES position (id),
-            game_id REFERENCES game (id),
-            player_id REFERENCES player (id),
+            timestamp BIGINT NOT NULL
             )
         """,
         """
@@ -174,10 +146,7 @@ def create_tables(conn):
             id SERIAL PRIMARY KEY,
             type TEXT NOT NULL,
             ward_type TEXT NOT NULL,
-            timestamp BIGINT NOT NULL,
-            position REFERENCES position (id),
-            game_id REFERENCES game (id),
-            player_id REFERENCES player (id),
+            timestamp BIGINT NOT NULL
             )
         """,
         """
@@ -194,11 +163,7 @@ def create_tables(conn):
             lane TEXT NOT NULL,
             side TEXT NOT NULL,
             tower_location TEXT NOT NULL,
-            timestamp BIGINT NOT NULL,
-            position REFERENCES position (id),
-            game_id REFERENCES game (id),
-            killer_id REFERENCES player (id),
-            team_id REFERENCES team (id)
+            timestamp BIGINT NOT NULL
             )
         """,
         """
@@ -213,56 +178,14 @@ def create_tables(conn):
             baron_kills INTEGER NOT NULL,
             first_rift_herald BOOLEAN NOT NULL,
             first_dragon BOOLEAN NOT NULL,
-            first_baron BOOLEAN NOT NULL,
-            game_id REFERENCES game (id),
-            team_id REFERENCES team (id),
+            first_baron BOOLEAN NOT NULL
             )
         """,
         """
         CREATE TABLE kill (
             id SERIAL PRIMARY KEY,
-            timestamp BIGINT NOT NULL,
+            timestamp BIGINT NOT NULL
             )
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN game_id SERIAL
-            REFERENCES game (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN killer_id SERIAL
-            REFERENCES player (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN assist_id_1 SERIAL
-            REFERENCES player (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN assist_id_2 SERIAL
-            REFERENCES player (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN assist_id_3 SERIAL
-            REFERENCES player (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN assist_id_4 SERIAL
-            REFERENCES player (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN victim_id SERIAL
-            REFERENCES player (id);
-        """,
-        """
-            ALTER TABLE kill
-            ADD COLUMN position SERIAL
-            REFERENCES position (id);
         """,
         """
         CREATE TABLE source (
@@ -302,7 +225,7 @@ def create_tables(conn):
             r4 TEXT NOT NULL,
             b4 TEXT NOT NULL,
             b5 TEXT NOT NULL,
-            r5 TEXT NOT NULL,
+            r5 TEXT NOT NULL
             )
         """,
         """
@@ -310,33 +233,253 @@ def create_tables(conn):
             id SERIAL PRIMARY KEY,
             type TEXT NOT NULL,
             sub_type TEXT NOT NULL,
-            timestamp BIGINT NOT NULL,
+            timestamp BIGINT NOT NULL
             )
+        """,
+        """
+            ALTER TABLE game_player_snapshot
+            ADD COLUMN position SERIAL
+            REFERENCES position (id)
+        """,
+        """
+            ALTER TABLE game_player_snapshot
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE game_player_snapshot
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE end_game_stats_player
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE end_game_stats_player
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE rune
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE rune
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN primary_1 SERIAL
+            REFERENCES rune (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN primary_2 SERIAL
+            REFERENCES rune (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN primary_3 SERIAL
+            REFERENCES rune (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN secondary_1 SERIAL
+            REFERENCES rune (id)
+        """,
+        """
+            ALTER TABLE game_player_rune
+            ADD COLUMN secondary_2 SERIAL
+            REFERENCES rune (id)
+        """,
+        """
+            ALTER TABLE player
+            ADD COLUMN team_id SERIAL
+            REFERENCES team (id)
+        """,
+        """
+            ALTER TABLE player
+            ADD COLUMN summoner_spells SERIAL
+            REFERENCES summoner_spell_player (id)
+        """,
+        """
+            ALTER TABLE player
+            ADD COLUMN runes SERIAL
+            REFERENCES rune (id)
+        """,
+        """
+            ALTER TABLE player
+            ADD COLUMN item_events SERIAL
+            REFERENCES player_item_event (id)
+        """,
+        """
+            ALTER TABLE player
+            ADD COLUMN ward_events SERIAL
+            REFERENCES player_ward_event (id)
+        """,
+        """
+            ALTER TABLE player_item
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE player_item
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE player_level_up_event
+            ADD COLUMN position SERIAL
+            REFERENCES position (id)
+        """,
+        """
+            ALTER TABLE player_level_up_event
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE player_level_up_event
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE player_item_event
+            ADD COLUMN position SERIAL
+            REFERENCES position (id)
+        """,
+        """
+            ALTER TABLE player_item_event
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE player_item_event
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE player_ward_event
+            ADD COLUMN position SERIAL
+            REFERENCES position (id)
+        """,
+        """
+            ALTER TABLE player_ward_event
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE player_ward_event
+            ADD COLUMN player_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE team_building_kill
+            ADD COLUMN position SERIAL
+            REFERENCES position (id)
+        """,
+        """
+            ALTER TABLE team_building_kill
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE team_building_kill
+            ADD COLUMN killer_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE team_building_kill
+            ADD COLUMN team_id SERIAL
+            REFERENCES team (id)
+        """,
+        """
+            ALTER TABLE end_game_stats_team
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE end_game_stats_team
+            ADD COLUMN team_id SERIAL
+            REFERENCES team (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN game_id SERIAL
+            REFERENCES game (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN killer_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_1 SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_2 SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_3 SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN assist_id_4 SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN victim_id SERIAL
+            REFERENCES player (id)
+        """,
+        """
+            ALTER TABLE kill
+            ADD COLUMN position SERIAL
+            REFERENCES position (id)
         """,
         """
             ALTER TABLE pick_ban
             ADD COLUMN game_id SERIAL
-            REFERENCES game (id);
+            REFERENCES game (id)
         """,
         """
             ALTER TABLE team_monster_kill
             ADD COLUMN game_id SERIAL
-            REFERENCES game (id);
+            REFERENCES game (id)
         """,
         """
             ALTER TABLE team_monster_kill
             ADD COLUMN team_id SERIAL
-            REFERENCES team (id);
+            REFERENCES team (id)
         """,
         """
             ALTER TABLE team_monster_kill
             ADD COLUMN player SERIAL
-            REFERENCES player (id);
+            REFERENCES player (id)
         """,
         """
             ALTER TABLE team_monster_kill
             ADD COLUMN position SERIAL
-            REFERENCES position (id);
+            REFERENCES position (id)
         """
         )
     try:
