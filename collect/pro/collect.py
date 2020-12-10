@@ -1,5 +1,11 @@
+import sys
+sys.path.append('..')
 import leaguepedia_parser
-from pprint import pprint
+import lol_id_tools as lit
+import json
+
+with open('../runes_reforged.json') as f:
+  runes_reforged = json.load(f)
 
 def get_regions():
     return leaguepedia_parser.get_regions()
@@ -27,6 +33,7 @@ def sqlize_game(game):
     if "sources" in game and "riotLolApi" in game['sources']:
         table['platform'] = game['sources']['riotLolApi']['platformId'] 
         table['game_id'] = game['sources']['riotLolApi']['gameId']
+        table['game_hash'] = game['sources']['riotLolApi']['gameHash']
     table['duration'] = game['duration']
     table['start'] = game['start']
     table['tournament'] = game['tournament']
@@ -35,29 +42,98 @@ def sqlize_game(game):
     return table
 
 def sqlize_end_game_stats_player(game):
+    teams = ["BLUE", "RED"]
+    stats_needed = ['kills', 'assists', 'deaths', 'cs', 'gold']
     table = {}
-    return True
+    for team in teams:
+        table[team] = {}
+        for i, player in enumerate(game['teams'][team]["players"]):
+            lp_player = player['uniqueIdentifiers']['leaguepedia']
+            table[team][i] = {}
+            for stat in stats_needed:
+                table[team][i][stat] = lp_player[stat]
 
-def collect():
-    printed = False
-    regions = get_regions()
-    for region in regions:
-        tournaments = get_tournaments(region, 2020)
-        for tournament in tournaments:
-            games = get_tournament_games(tournament["overviewPage"])
-            for game in games:
-                game_details = get_tournament_game_details(game)
-                game_table = sqlize_game(game)
-                pprint(game)
-                pprint(game_details)
-                if game:
-                    printed = True
-                if printed:
-                    break
-            if printed:
-                break
-        if printed:
-            break
+    return table
 
+def sqlize_runes(game):
+    teams = ["BLUE", "RED"]
+    table = {}
+    for team in teams:
+        table[team] = {}
+        for i, player in enumerate(game['teams'][team]["players"]):
+            lp_player = player['uniqueIdentifiers']['leaguepedia']
+            runes = lp_player['runes'].split(',')
 
-collect()
+            table[team][i] = {}
+            for j, player_rune in enumerate(runes):
+                for r in runes_reforged:
+                    for row in r['slots']:
+                        for rune in row['runes']:
+                            if j >= 6:
+                                table[team][i][f'base_stats_{j - 5}'] = player_rune
+                            if player_rune == rune['name']:
+                                if j == 0:
+                                    table[team][i]["primary_tree"] = r['name']
+                                    table[team][i]["primary_keystone"] = {"riot_id": rune['id'], "name": rune['name'], "primary": True}
+                                    primary = r['name']
+                                elif j <= 1 and j <= 3:
+                                    table[team][i][f'primary_{j}'] = {"riot_id": rune['id'], "name": rune['name'], "primary": primary == r['name']}
+                                elif j == 4:
+                                    table[team][i]["secondary_tree"] = r['name']
+                                    table[team][i]["secondary_1"] = {"riot_id": rune['id'], "name": rune['name'], "primary": primary == r['name']}
+                                elif j == 5:
+                                    table[team][i]["secondary_2"] = {"riot_id": rune['id'], "name": rune['name'], "primary": primary == r['name']}
+    return table
+
+def sqlize_items(game):
+    teams = ["BLUE", "RED"]
+    table = {}
+    for team in teams:
+        table[team] = {}
+        for i, player in enumerate(game['teams'][team]["players"]):
+            table[team][i] = {}
+            lp_player = player['uniqueIdentifiers']['leaguepedia']
+            table[team][i]["items"] = [item for item in lp_player['items'].split(',') if item != ""]
+    return table
+
+def sqlize_summoner_spells(game):
+    teams = ["BLUE", "RED"]
+    table = {}
+    for team in teams:
+        table[team] = {}
+        for i, player in enumerate(game['teams'][team]["players"]):
+            table[team][i] = {} 
+            lp_player = player['uniqueIdentifiers']['leaguepedia']
+            table[team][i]["ss"] = lp_player['ss'].split(',')
+    return table
+
+def sqlize_teams(game):
+    teams = ["BLUE", "RED"]
+    table = {} 
+    for team in teams: 
+        table[team] = {} 
+        table[team]['name'] = game['teams'][team]["name"]
+        table[team]['side'] = team
+    return table
+
+def sqlize_source(game):
+    table = {}
+    table["source_name"] = "leaguepedia"
+    table["platform_id"] = game["sources"]["riotLolApi"]["platformId"]
+    table['patch'] = game["patch"]
+    return table
+
+def sqlize_pick_ban(game):
+    table = {}
+    ban_num = 1
+    picks = ['b1', 'r1', 'r2', 'b2', 'b3', 'r3', 'r4', 'b4', 'b5', 'r5']
+    pick_num = 0
+    for action in game["picksBans"]:
+        if action["isBan"]:
+            table[f"ban_{ban_num}"] = action["championName"]
+            ban_num += 1
+        else:
+            table[picks[pick_num]] = action["championName"]
+            print(pick_num)
+            pick_num += 1
+    return table

@@ -30,7 +30,6 @@ services:
     working_dir: /
     volumes:
       - ./db-data:/var/lib/postgresql/data
-    # command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; python ./pro/main.py'
     command:
       - bash
       - ./wait-for-it.sh

@@ -1,0 +1,508 @@
+{"duration": 1896,
+"gameInSeries": 1,
+"patch": "10.15",
+"picksBans": [{"championId": 104,
+                "championName": "Graves",  
+                "isBan": True,
+                "team": "BLUE"},
+                {"championId": 106,
+                "championName": "Volibear",
+                "isBan": True,
+                "team": "RED"},
+                {"championId": 7,
+                "championName": "LeBlanc", 
+                "isBan": True,
+                "team": "BLUE"},
+                {"championId": 79,
+                "championName": "Gragas",
+                "isBan": True,
+                "team": "RED"},
+                {"championId": 3,
+                "championName": "Galio",
+                "isBan": True,
+                "team": "BLUE"},
+                {"championId": 48,
+                "championName": "Trundle",
+                "isBan": True,
+                "team": "RED"},
+                {"championId": 4,
+                "championName": "Twisted Fate",
+                "isBan": False,
+                "team": "BLUE"},
+                {"championId": 429,
+                "championName": "Kalista",
+                "isBan": False,
+                "team": "RED"},
+                {"championId": 2,
+                "championName": "Olaf",
+                "isBan": False,
+                "team": "RED"},
+                {"championId": 22,
+                "championName": "Ashe",
+                "isBan": False,
+                "team": "BLUE"},
+                {"championId": 432,
+                "championName": "Bard",
+                "isBan": False,
+                "team": "BLUE"},
+                {"championId": 412,
+                "championName": "Thresh",
+                "isBan": False,
+                "team": "RED"},
+                {"championId": 56,
+                "championName": "Nocturne",
+                "isBan": True,
+                "team": "RED"},
+                {"championId": 134,
+                "championName": "Syndra",
+                "isBan": True,
+                "team": "BLUE"},
+                {"championId": 64,
+                "championName": "Lee Sin",
+                "isBan": True,
+                "team": "RED"},
+                {"championId": 164,
+                "championName": "Camille",
+                "isBan": True,
+                "team": "BLUE"},
+                {"championId": 142,
+                "championName": "Zoe",
+                "isBan": False,
+                "team": "RED"},
+                {"championId": 875,
+                "championName": "Sett",
+                "isBan": False,
+                "team": "BLUE"},
+                {"championId": 6,
+                "championName": "Urgot",
+                "isBan": False,
+                "team": "BLUE"},
+                {"championId": 62,
+                "championName": "Wukong",
+                "isBan": False,
+                "team": "RED"}],
+"sources": {"leaguepedia": {"matchHistoryUrl": "http://matchhistory.na.leagueoflegends.com/en/#match-details/ESPORTSTMNT02/1401713?gameHash=98471b8108ebdf49",
+                            "overviewPage": "CBLOL/2020 Season/Split 2",
+                            "scoreboardIdWiki": "CBLOL/2020 Season/Split "
+                                                "2_Week 9_1_1",
+                            "uniqueGame": "CBLOL/2020 Season/Split "
+                                            "2/Scoreboards/Week 9_1_1"},
+            "riotLolApi": {"gameHash": "98471b8108ebdf49",
+                            "gameId": 1401713,
+                            "platformId": "ESPORTSTMNT02"}},
+"start": "2020-08-01T15:58:00+00:00",
+"teams": {"BLUE": {"bans": [104, 7, 3, 134, 164],
+                    "bansNames": ["Graves",
+                                    "LeBlanc",
+                                    "Galio",
+                                    "Syndra",
+                                    "Camille"],
+                    "endOfGameStats": {"baronKills": 0,
+                                        "dragonKills": 2,
+                                        "riftHeraldKills": 2,
+                                        "towerKills": 3},
+                    "name": "INTZ",
+                    "players": [{"championId": 6,
+                                "championName": "Urgot",
+                                "role": "TOP",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "",
+                                                                        "assists": "1",
+                                                                        "country": "Brazil",
+                                                                        "cs": "236",
+                                                                        "deaths": "3",
+                                                                        "gold": "11429",
+                                                                        "irlName": "Rodrigo "
+                                                                                    "Panisa",
+                                                                        "items": "Righteous "
+                                                                                "Glory,Black "
+                                                                                "Cleaver,Ninja "
+                                                                                "Tabi,Death"s "
+                                                                                "Dance,Doran"s "
+                                                                                "Blade,",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Unsealed "
+                                                                                        "Spellbook",
+                                                                        "kills": "3",
+                                                                        "name": "Tay",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Top",
+                                                                        "runes": "Unsealed "
+                                                                                "Spellbook,Magical "
+                                                                                "Footwear,Biscuit "
+                                                                                "Delivery,Cosmic "
+                                                                                "Insight,Shield "
+                                                                                "Bash,Bone "
+                                                                                "Plating,Adaptive "
+                                                                                "Force,Adaptive "
+                                                                                "Force,Armor",
+                                                                        "ss": "Flash,Teleport",
+                                                                        "team": "INTZ",
+                                                                        "trinket": "Warding "
+                                                                                    "Totem"}}},
+                                {"championId": 875,
+                                "championName": "Sett",
+                                "role": "JGL",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "24",
+                                                                        "assists": "3",
+                                                                        "country": "Brazil",
+                                                                        "cs": "193",
+                                                                        "deaths": "1",
+                                                                        "gold": "9854",
+                                                                        "irlName": "Diogo "
+                                                                                    "Rogê",
+                                                                        "items": "Stalker"s "
+                                                                                "Blade "
+                                                                                "- "
+                                                                                "Cinderhulk,,Ninja "
+                                                                                "Tabi,Randuin"s "
+                                                                                "Omen,Spectre"s "
+                                                                                "Cowl,Kindlegem",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Phase "
+                                                                                        "Rush",
+                                                                        "kills": "0",
+                                                                        "name": "Shini",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Jungle",
+                                                                        "runes": "Phase "
+                                                                                "Rush,Nimbus "
+                                                                                "Cloak,Celerity,Waterwalking,Approach "
+                                                                                "Velocity,Hextech "
+                                                                                "Flashtraption,Attack "
+                                                                                "Speed,Adaptive "
+                                                                                "Force,Armor",
+                                                                        "ss": "Smite,Flash",
+                                                                        "team": "INTZ",
+                                                                        "trinket": "Oracle "
+                                                                                    "Lens"}}},
+                                {"championId": 4,
+                                "championName": "Twisted Fate",
+                                "role": "MID",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "22",
+                                                                        "assists": "4",
+                                                                        "country": "Brazil",
+                                                                        "cs": "243",
+                                                                        "deaths": "3",
+                                                                        "gold": "10960",
+                                                                        "irlName": "Bruno "
+                                                                                    "Farias",
+                                                                        "items": "Mercury"s "
+                                                                                "Treads,Broken "
+                                                                                "Stopwatch,Needlessly "
+                                                                                "Large "
+                                                                                "Rod,Rod "
+                                                                                "of "
+                                                                                "Ages,Lich "
+                                                                                "Bane,Needlessly "
+                                                                                "Large "
+                                                                                "Rod",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Unsealed "
+                                                                                        "Spellbook",
+                                                                        "kills": "0",
+                                                                        "name": "Envy",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Mid",
+                                                                        "runes": "Unsealed "
+                                                                                "Spellbook,Perfect "
+                                                                                "Timing,Minion "
+                                                                                "Dematerializer,Time "
+                                                                                "Warp "
+                                                                                "Tonic,Nimbus "
+                                                                                "Cloak,Celerity,Attack "
+                                                                                "Speed,Adaptive "
+                                                                                "Force,Magic "
+                                                                                "Resistance",
+                                                                        "ss": "Flash,Teleport",
+                                                                        "team": "INTZ",
+                                                                        "trinket": "Farsight "
+                                                                                    "Alteration"}}},
+                                {"championId": 22,
+                                "championName": "Ashe",
+                                "role": "BOT",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "24",
+                                                                        "assists": "1",
+                                                                        "country": "Brazil",
+                                                                        "cs": "266",
+                                                                        "deaths": "5",
+                                                                        "gold": "11610",
+                                                                        "irlName": "Micael "
+                                                                                    "Rodrigues",
+                                                                        "items": "Mortal "
+                                                                                "Reminder,Runaan"s "
+                                                                                "Hurricane,Blade "
+                                                                                "of "
+                                                                                "the "
+                                                                                "Ruined "
+                                                                                "King,,,Berserker"s "
+                                                                                "Greaves",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Lethal "
+                                                                                        "Tempo",
+                                                                        "kills": "1",
+                                                                        "name": "micaO",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Bot",
+                                                                        "runes": "Lethal "
+                                                                                "Tempo,Presence "
+                                                                                "of "
+                                                                                "Mind,Legend: "
+                                                                                "Alacrity,Cut "
+                                                                                "Down,Biscuit "
+                                                                                "Delivery,Approach "
+                                                                                "Velocity,Attack "
+                                                                                "Speed,Adaptive "
+                                                                                "Force,Armor",
+                                                                        "ss": "Flash,Heal",
+                                                                        "team": "INTZ",
+                                                                        "trinket": "Farsight "
+                                                                                    "Alteration"}}},
+                                {"championId": 432,
+                                "championName": "Bard",
+                                "role": "SUP",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "",
+                                                                        "assists": "1",
+                                                                        "country": "Brazil",
+                                                                        "cs": "57",
+                                                                        "deaths": "3",
+                                                                        "gold": "6915",
+                                                                        "irlName": "Ygor "
+                                                                                    "Freitas",
+                                                                        "items": "Shurelya"s "
+                                                                                "Reverie,Boots "
+                                                                                "of "
+                                                                                "Swiftness,Bulwark "
+                                                                                "of "
+                                                                                "the "
+                                                                                "Mountain,,Chalice "
+                                                                                "of "
+                                                                                "Harmony,Forbidden "
+                                                                                "Idol",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Guardian",
+                                                                        "kills": "1",
+                                                                        "name": "RedBert",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Support",
+                                                                        "runes": "Guardian,Font "
+                                                                                "of "
+                                                                                "Life,Bone "
+                                                                                "Plating,Unflinching,Zombie "
+                                                                                "Ward,Relentless "
+                                                                                "Hunter,Attack "
+                                                                                "Speed,Magic "
+                                                                                "Resistance,Armor",
+                                                                        "ss": "Flash,Exhaust",
+                                                                        "team": "INTZ",
+                                                                        "trinket": "Oracle "
+                                                                                    "Lens"}}}]},
+            "RED": {"bans": [106, 79, 48, 56, 64],
+                    "bansNames": ["Volibear",
+                                "Gragas",
+                                "Trundle",
+                                "Nocturne",
+                                "Lee Sin"],
+                    "endOfGameStats": {"baronKills": 2,
+                                        "dragonKills": 3,
+                                        "riftHeraldKills": 0,
+                                        "towerKills": 9},
+                    "name": "paiN Gaming",
+                    "players": [{"championId": 62,
+                                "championName": "Wukong",
+                                "role": "TOP",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "22",
+                                                                        "assists": "7",
+                                                                        "country": "Brazil",
+                                                                        "cs": "274",
+                                                                        "deaths": "0",
+                                                                        "gold": "14213",
+                                                                        "irlName": "Leonardo "
+                                                                                "Souza",
+                                                                        "items": "Death"s "
+                                                                                "Dance,Guardian "
+                                                                                "Angel,Tiamat,Ninja "
+                                                                                "Tabi,Long "
+                                                                                "Sword,Trinity "
+                                                                                "Force "
+                                                                                "(Legacy)",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Conqueror",
+                                                                        "kills": "5",
+                                                                        "name": "Robo",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Top",
+                                                                        "runes": "Conqueror,Triumph,Legend: "
+                                                                                "Tenacity,Last "
+                                                                                "Stand,Magical "
+                                                                                "Footwear,Biscuit "
+                                                                                "Delivery,Attack "
+                                                                                "Speed,Adaptive "
+                                                                                "Force,Armor",
+                                                                        "ss": "Teleport,Flash",
+                                                                        "team": "paiN "
+                                                                                "Gaming",
+                                                                        "trinket": "Warding "
+                                                                                "Totem"}}},
+                                {"championId": 2,
+                                "championName": "Olaf",
+                                "role": "JGL",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "20",
+                                                                        "assists": "8",
+                                                                        "country": "Brazil",
+                                                                        "cs": "168",
+                                                                        "deaths": "0",
+                                                                        "gold": "10942",
+                                                                        "irlName": "Marcos "
+                                                                                "Santos "
+                                                                                "de "
+                                                                                "Oliveira "
+                                                                                "Junior",
+                                                                        "items": "Stalker"s "
+                                                                                "Blade "
+                                                                                "- "
+                                                                                "Cinderhulk,Black "
+                                                                                "Cleaver,Control "
+                                                                                "Ward,Ninja "
+                                                                                "Tabi,Jaurim"s "
+                                                                                "Fist,Warden"s "
+                                                                                "Mail",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Conqueror",
+                                                                        "kills": "4",
+                                                                        "name": "CarioK",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Jungle",
+                                                                        "runes": "Conqueror,Triumph,Legend: "
+                                                                                "Alacrity,Last "
+                                                                                "Stand,Approach "
+                                                                                "Velocity,Magical "
+                                                                                "Footwear,Adaptive "
+                                                                                "Force,Adaptive "
+                                                                                "Force,Armor",
+                                                                        "ss": "Flash,Smite",
+                                                                        "team": "paiN "
+                                                                                "Gaming",
+                                                                        "trinket": "Oracle "
+                                                                                "Lens"}}},
+                                {"championId": 142,
+                                "championName": "Zoe",
+                                "role": "MID",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "23",
+                                                                        "assists": "8",
+                                                                        "country": "Brazil",
+                                                                        "cs": "233",
+                                                                        "deaths": "2",
+                                                                        "gold": "11346",
+                                                                        "irlName": "Thiago "
+                                                                                "Sartori",
+                                                                        "items": "Rabadon"s "
+                                                                                "Deathcap,Corrupting "
+                                                                                "Potion,Blasting "
+                                                                                "Wand,Luden"s "
+                                                                                "Echo,Dark "
+                                                                                "Seal,Sorcerer"s "
+                                                                                "Shoes",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Unsealed "
+                                                                                        "Spellbook",
+                                                                        "kills": "2",
+                                                                        "name": "tinowns",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Mid",
+                                                                        "runes": "Unsealed "
+                                                                                "Spellbook,Perfect "
+                                                                                "Timing,Minion "
+                                                                                "Dematerializer,Time "
+                                                                                "Warp "
+                                                                                "Tonic,Nimbus "
+                                                                                "Cloak,Transcendence,Adaptive "
+                                                                                "Force,Adaptive "
+                                                                                "Force,Magic "
+                                                                                "Resistance",
+                                                                        "ss": "Flash,Teleport",
+                                                                        "team": "paiN "
+                                                                                "Gaming",
+                                                                        "trinket": "Farsight "
+                                                                                "Alteration"}}},
+                                {"championId": 429,
+                                "championName": "Kalista",
+                                "role": "BOT",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "29",
+                                                                        "assists": "8",
+                                                                        "country": "Brazil",
+                                                                        "cs": "275",
+                                                                        "deaths": "0",
+                                                                        "gold": "14452",
+                                                                        "irlName": "Felipe "
+                                                                                "Gonçalves",
+                                                                        "items": "Blade "
+                                                                                "of "
+                                                                                "the "
+                                                                                "Ruined "
+                                                                                "King,Death"s "
+                                                                                "Dance,Last "
+                                                                                "Whisper,Runaan"s "
+                                                                                "Hurricane,Berserker"s "
+                                                                                "Greaves,Executioner"s "
+                                                                                "Calling",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Hail "
+                                                                                        "of "
+                                                                                        "Blades",
+                                                                        "kills": "4",
+                                                                        "name": "brTT",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Bot",
+                                                                        "runes": "Hail "
+                                                                                "of "
+                                                                                "Blades,Taste "
+                                                                                "of "
+                                                                                "Blood,Zombie "
+                                                                                "Ward,Ultimate "
+                                                                                "Hunter,Legend: "
+                                                                                "Alacrity,Cut "
+                                                                                "Down,Attack "
+                                                                                "Speed,Adaptive "
+                                                                                "Force,Armor",
+                                                                        "ss": "Cleanse,Flash",
+                                                                        "team": "paiN "
+                                                                                "Gaming",
+                                                                        "trinket": "Farsight "
+                                                                                "Alteration"}}},
+                                {"championId": 412,
+                                "championName": "Thresh",
+                                "role": "SUP",
+                                "uniqueIdentifiers": {"leaguepedia": {"age": "26",
+                                                                        "assists": "13",
+                                                                        "country": "Japan",
+                                                                        "cs": "34",
+                                                                        "deaths": "3",
+                                                                        "gold": "7970",
+                                                                        "irlName": "André&amp;nbsp;Eidi "
+                                                                                "Yanagimachi "
+                                                                                "Pavezi",
+                                                                        "items": "Boots "
+                                                                                "of "
+                                                                                "Swiftness,Shurelya's "
+                                                                                "Reverie,Redemption,Pauldrons "
+                                                                                "of "
+                                                                                "Whiterock,,",
+                                                                        "keystoneMastery": "",
+                                                                        "keystoneRune": "Aftershock",
+                                                                        "kills": "0",
+                                                                        "name": "esA",
+                                                                        "residency": "Brazil",
+                                                                        "role": "Support",
+                                                                        "runes": "Aftershock,Demolish,Bone "
+                                                                                "Plating,Unflinching,Perfect "
+                                                                                "Timing,Cosmic "
+                                                                                "Insight,Cooldown "
+                                                                                "Reduction,Armor,Armor",
+                                                                        "ss": "Ignite,Flash",
+                                                                        "team": "paiN "
+                                                                                "Gaming",
+                                                                        "trinket": "Oracle "
+                                                                                "Lens"}}}]}},
+"tournament": "CBLOL 2020 Split 2",
+"vod": "https://youtu.be/53VI4kvnYO0?t=1",
+"winner": "RED"}

@@ -1,0 +1,432 @@
+[
+  {
+    "id": 8100,
+    "key": "Domination",
+    "name": "Domination",
+    "slots": [
+      {
+        "runes": [
+          {
+            "id": 8112,
+            "key": "Electrocute",
+            "name": "Electrocute"
+          },
+          {
+            "id": 8124,
+            "key": "Predator",
+            "name": "Predator"
+          },
+          {
+            "id": 8128,
+            "key": "DarkHarvest",
+            "name": "Dark Harvest"
+          },
+          {
+            "id": 9923,
+            "key": "HailOfBlades",
+            "name": "Hail of Blades"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8126,
+            "key": "CheapShot",
+            "name": "Cheap Shot"
+          },
+          {
+            "id": 8139,
+            "key": "TasteOfBlood",
+            "name": "Taste of Blood"
+          },
+          {
+            "id": 8143,
+            "key": "SuddenImpact",
+            "name": "Sudden Impact"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8136,
+            "key": "ZombieWard",
+            "name": "Zombie Ward"
+          },
+          {
+            "id": 8120,
+            "key": "GhostPoro",
+            "name": "Ghost Poro"
+          },
+          {
+            "id": 8138,
+            "key": "EyeballCollection",
+            "name": "Eyeball Collection"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8135,
+            "key": "RavenousHunter",
+            "name": "Ravenous Hunter"
+          },
+          {
+            "id": 8134,
+            "key": "IngeniousHunter",
+            "name": "Ingenious Hunter"
+          },
+          {
+            "id": 8105,
+            "key": "RelentlessHunter",
+            "name": "Relentless Hunter"
+          },
+          {
+            "id": 8106,
+            "key": "UltimateHunter",
+            "name": "Ultimate Hunter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8300,
+    "key": "Inspiration",
+    "name": "Inspiration",
+    "slots": [
+      {
+        "runes": [
+          {
+            "id": 8351,
+            "key": "GlacialAugment",
+            "name": "Glacial Augment"
+          },
+          {
+            "id": 8359,
+            "key": "Kleptomancy",
+            "name": "Kleptomancy"
+          },
+          {
+            "id": 8360,
+            "key": "UnsealedSpellbook",
+            "name": "Unsealed Spellbook"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8306,
+            "key": "HextechFlashtraption",
+            "name": "Hextech Flashtraption"
+          },
+          {
+            "id": 8304,
+            "key": "MagicalFootwear",
+            "name": "Magical Footwear"
+          },
+          {
+            "id": 8313,
+            "key": "PerfectTiming",
+            "name": "Perfect Timing"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8321,
+            "key": "FuturesMarket",
+            "name": "Future's Market"
+          },
+          {
+            "id": 8316,
+            "key": "MinionDematerializer",
+            "name": "Minion Dematerializer"
+          },
+          {
+            "id": 8345,
+            "key": "BiscuitDelivery",
+            "name": "Biscuit Delivery"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8347,
+            "key": "CosmicInsight",
+            "name": "Cosmic Insight"
+          },
+          {
+            "id": 8410,
+            "key": "ApproachVelocity",
+            "name": "Approach Velocity"
+          },
+          {
+            "id": 8352,
+            "key": "TimeWarpTonic",
+            "name": "Time Warp Tonic"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000,
+    "key": "Precision",
+    "name": "Precision",
+    "slots": [
+      {
+        "runes": [
+          {
+            "id": 8005,
+            "key": "PressTheAttack",
+            "name": "Press the Attack"
+          },
+          {
+            "id": 8008,
+            "key": "LethalTempo",
+            "name": "Lethal Tempo"
+          },
+          {
+            "id": 8021,
+            "key": "FleetFootwork",
+            "name": "Fleet Footwork"
+          },
+          {
+            "id": 8010,
+            "key": "Conqueror",
+            "name": "Conqueror"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 9101,
+            "key": "Overheal",
+            "name": "Overheal"
+          },
+          {
+            "id": 9111,
+            "key": "Triumph",
+            "name": "Triumph"
+          },
+          {
+            "id": 8009,
+            "key": "PresenceOfMind",
+            "name": "Presence of Mind"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 9104,
+            "key": "LegendAlacrity",
+            "name": "Legend: Alacrity"
+          },
+          {
+            "id": 9105,
+            "key": "LegendTenacity",
+            "name": "Legend: Tenacity"
+          },
+          {
+            "id": 9103,
+            "key": "LegendBloodline",
+            "name": "Legend: Bloodline"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8014,
+            "key": "CoupDeGrace",
+            "name": "Coup de Grace"
+          },
+          {
+            "id": 8017,
+            "key": "CutDown",
+            "name": "Cut Down"
+          },
+          {
+            "id": 8299,
+            "key": "LastStand",
+            "name": "Last Stand"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8400,
+    "key": "Resolve",
+    "name": "Resolve",
+    "slots": [
+      {
+        "runes": [
+          {
+            "id": 8437,
+            "key": "GraspOfTheUndying",
+            "name": "Grasp of the Undying"
+          },
+          {
+            "id": 8439,
+            "key": "Aftershock",
+            "name": "Aftershock"
+          },
+          {
+            "id": 8465,
+            "key": "Guardian",
+            "name": "Guardian"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8446,
+            "key": "Demolish",
+            "name": "Demolish"
+          },
+          {
+            "id": 8463,
+            "key": "FontOfLife",
+            "name": "Font of Life"
+          },
+          {
+            "id": 8401,
+            "key": "ShieldBash",
+            "name": "Shield Bash"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8429,
+            "key": "Conditioning",
+            "name": "Conditioning"
+          },
+          {
+            "id": 8444,
+            "key": "SecondWind",
+            "name": "Second Wind"
+          },
+          {
+            "id": 8473,
+            "key": "BonePlating",
+            "name": "Bone Plating"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8451,
+            "key": "Overgrowth",
+            "name": "Overgrowth"
+          },
+          {
+            "id": 8453,
+            "key": "Revitalize",
+            "name": "Revitalize"
+          },
+          {
+            "id": 8242,
+            "key": "Unflinching",
+            "name": "Unflinching"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8200,
+    "key": "Sorcery",
+    "name": "Sorcery",
+    "slots": [
+      {
+        "runes": [
+          {
+            "id": 8214,
+            "key": "SummonAery",
+            "name": "Summon Aery"
+          },
+          {
+            "id": 8229,
+            "key": "ArcaneComet",
+            "name": "Arcane Comet"
+          },
+          {
+            "id": 8230,
+            "key": "PhaseRush",
+            "name": "Phase Rush"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8224,
+            "key": "NullifyingOrb",
+            "name": "Nullifying Orb"
+          },
+          {
+            "id": 8226,
+            "key": "ManaflowBand",
+            "name": "Manaflow Band"
+          },
+          {
+            "id": 8275,
+            "key": "NimbusCloak",
+            "name": "Nimbus Cloak"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8210,
+            "key": "Transcendence",
+            "name": "Transcendence"
+          },
+          {
+            "id": 8234,
+            "key": "Celerity",
+            "name": "Celerity"
+          },
+          {
+            "id": 8233,
+            "key": "AbsoluteFocus",
+            "name": "Absolute Focus"
+          }
+        ]
+      },
+      {
+        "runes": [
+          {
+            "id": 8237,
+            "key": "Scorch",
+            "name": "Scorch"
+          },
+          {
+            "id": 8232,
+            "key": "Waterwalking",
+            "name": "Waterwalking"
+          },
+          {
+            "id": 8236,
+            "key": "GatheringStorm",
+            "name": "Gathering Storm"
+          }
+        ]
+      }
+    ]
+  }
+]
